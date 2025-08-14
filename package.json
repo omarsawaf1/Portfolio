@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This is my portfolio. It contains a collection of projects that I have completed.\r I have Used HTML, CSS, Typescript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarsawaf1/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/omarsawaf1/Portfolio/issues"
+  },
+  "homepage": "https://github.com/omarsawaf1/Portfolio#readme",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
