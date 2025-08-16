@@ -7,39 +7,35 @@
     <title>Home</title>
     <link rel="stylesheet" href="../css/main.css" />
   </head>
-  <body class="darkmode">
+  <body data-light-theme="false">
     <header>
+      <a href="index.html">
+        <div class="logoContainer">
+          <img src="../assets/OTL_logo.png" alt="OTL Logo" class="logo" />
+        </div>
+      </a>
       <nav>
-        <a href="index.html">
-          <div class="logoContainer">
-            <img
-              src="../resources/OTL logo 2.png"
-              alt="OTL Logo"
-              class="logo"
-            />
-          </div>
-        </a>
-
         <ul id="navLinks">
           <li class="navMain">
-            <button class="navButton" id="homeButton">
-              <a href="index.html"><h3>Home</h3></a>
-            </button>
+            <a href="index.html">
+              <button class="navButton">
+                <h3 class="navHeader">Home</h3>
+              </button>
+            </a>
           </li>
           <li class="navMain">
-            <button class="navButton" id="aboutButton">
-              <a href="#about"><h3>About</h3></a>
-            </button>
+            <a href="#about">
+              <button class="navButton">
+                <h3 class="navHeader">About</h3>
+              </button>
+            </a>
           </li>
-          <!-- <li class="navMain">
-          <button class="navButton" id="educationButton">
-            <a href="#edu"><h3>Education</h3></a>
-          </button>
-        </li> -->
           <li class="navMain">
-            <button class="navButton" id="skillnButton">
-              <a href="#skill"><h3>Skills</h3></a>
-            </button>
+            <a href="#skill">
+              <button class="navButton">
+                <h3 class="navHeader">Skills</h3>
+              </button>
+            </a>
           </li>
           <!-- <li class="navMain">
           <button class="navButton" id="worknButton">
@@ -47,22 +43,55 @@
           </button>
         </li> -->
           <li class="navMain">
-            <button class="navButton" id="servicenButton">
-              <a href="#service"><h3>Services</h3></a>
-            </button>
+            <a href="#service">
+              <button class="navButton">
+                <h3 class="navHeader">Services</h3>
+              </button>
+            </a>
           </li>
           <li class="navMain">
-            <button class="navButton" id="projectButton">
-              <a href="#project"><h3>Projects</h3></a>
-            </button>
+            <a href="#project">
+              <button class="navButton">
+                <h3 class="navHeader">Projects</h3>
+              </button>
+            </a>
           </li>
           <li class="navMain">
-            <button class="navButton" id="contactButton">
-              <a href="#contact"><h3>Contact</h3></a>
-            </button>
+            <a href="#contact">
+              <button class="navButton">
+                <h3 class="navHeader">Contact</h3>
+              </button>
+            </a>
           </li>
         </ul>
       </nav>
+
+      <div>
+        <button id="theme-switch">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#FC9601"
+          >
+            <path
+              d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#000"
+          >
+            <path
+              d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"
+            />
+          </svg>
+        </button>
+      </div>
     </header>
 
     <!-- Mian Content -->
@@ -71,14 +100,14 @@
         Welcome to <br />
         My <span id="portfolioWord">Portfolio</span>
       </h1>
-      <!-- <img src="../resources/me2.jpeg" alt="me" class="meImg" /> -->
-      <div class="jobTitle">
-        <h2>Omar Mohamed Hatem</h2>
-        <h2>Frontend Developer</h2>
+      <div id="jobTitleContainer">
+        <div class="jobTitle">
+          <h1>Omar Mohamed Hatem</h1>
+          <h2 id="jobTitleFrontend">Frontend Developer</h2>
+          <h2 id="jobTitleCybersec">Cybersecurity Analyst</h2>
+        </div>
       </div>
-      <div id="meImgContainer">
-        <!-- <img src="../resources/me3.png" alt="me" id="meImg" /> -->
-      </div>
+      <!-- <div id="meImgContainer"></div> -->
     </div>
     <div class="aboutSection" id="about">
       <div class="aboutTitle">
@@ -93,18 +122,75 @@
           that meet the needs of modern web developers.
         </p>
       </div>
-      <img src="../resources/coding.png" alt="coding image" id="codingImg" />
+      <img src="../assets/coding.png" alt="coding image" id="codingImg" />
     </div>
-    <div class="educationSection" id="education">
+    <div class="skillSection" id="skill">
       <div class="educationTitle">
         <h1>My Background</h1>
       </div>
       <div class="educationList">
-        <h2>Education</h2>
+        <button>Education</button>
         <p>
           Helwan University, Faculty of Engineering <br />
           Bachelor of Communication & Information
         </p>
+      </div>
+      <div class="skillList">
+        <button>Skills</button>
+        <p>
+          As a frontend developer, I have a wide range of skills that enable me
+          to create visually appealing and user-friendly websites. I am
+          proficient in HTML, CSS, and JavaScript, and have experience with
+          popular frameworks such as React and Angular. I also have expertise in
+          creating high-quality presentations, including PowerPoint and Google
+          Slides. I am a detail-oriented and organized individual with strong
+          communication skills, which enables me to effectively collaborate with
+          clients and team members to achieve project goals.
+        </p>
+      </div>
+      <div class="educationList">
+        <button>Work Experience</button>
+        <p>
+          As a skilled frontend developer, I have a strong background in
+          creating professional and visually appealing websites. I have
+          successfully developed two websites, utilizing my expertise in HTML,
+          CSS, and JavaScript. Additionally, I have experience with Java
+          application development, and have worked as a cybersecurity analyst,
+          providing top-notch security solutions to clients.
+        </p>
+      </div>
+    </div>
+    <div class="serviceSection" id="service">
+      <div class="serviceTitle">
+        <h1>Services</h1>
+      </div>
+      <div class="serviceList">
+        <div class="card">
+          <div class="serviceImg"></div>
+          <h3>Frontend Development</h3>
+          <p>
+            I offer Frontend development services for small businesses and
+            individuals looking to establish a strong online presence. Whether
+            you need a simple website or a complex e-commerce platform, I can
+            help you bring your vision to life.
+          </p>
+          <p>
+            I specialize in creating visually stunning and user-friendly
+            frontend interfaces for websites and applications. With a strong
+            understanding of HTML, CSS, and JavaScript, I can transform your
+            design concepts into functional and engaging user experiences.
+          </p>
+        </div>
+        <div class="card">
+          <div class="serviceImg"></div>
+          <h3>PowerPoint Presentations</h3>
+          <p>
+            I specialize in creating visually stunning presentations using
+            PowerPoint. With a strong understanding of Visuals and animations, I
+            can create presentation templates that meet the needs of your
+            audience.
+          </p>
+        </div>
       </div>
     </div>
     <div class="projectSection" id="project">
@@ -112,9 +198,87 @@
         <h1>Projects</h1>
       </div>
       <div class="projectList">
-        <h4>E commerce Website</h4>
-        <span class="projectImg"></span>
-        <!-- <a href="programming.html">Programming Projects</a> -->
+        <div class="card">
+          <div class="projectImg">
+            <img src="../assets/Ecom website/Jawda_Ecom1.jpeg" alt="Login" />
+            <img src="../assets/Ecom website/Jawda_Ecom2.jpeg" alt="Home" />
+            <img src="../assets/Ecom website/Jawda_Ecom3.jpeg" alt="Deals" />
+            <img
+              src="../assets/Ecom website/Jawda_Ecom4.jpeg"
+              alt="SuperMarket"
+            />
+            <img
+              src="../assets/Ecom website/Jawda_Ecom5.jpeg"
+              alt="Electronics"
+            />
+            <img src="../assets/Ecom website/Jawda_Ecom6.jpeg" alt="Cart" />
+          </div>
+          <h3>E-commerce Website</h3>
+          <p class="projectDescription">
+            An ecommerce website integrated with a backend, designed to provide
+            a seamless shopping experience for customers. Features include
+            secure payment processing, user authentication, product filtering
+            and sorting, and a cart system for tracking purchases.
+          </p>
+          <button
+            class="viewButton"
+            onclick="window.open('https://github.com/omarsawaf1/Ecom', '_blank')"
+          >
+            View
+          </button>
+        </div>
+        <div class="card">
+          <div class="projectImg">
+            <img
+              src="../assets/ids/welcome_screen.png"
+              alt="IDS welcome screen"
+            />
+            <img src="../assets/ids/login.png" alt="IDS login page" />
+            <img src="../assets/ids/main.png" alt="IDS main page" />
+            <img
+              src="../assets/ids/network_analyzer.png"
+              alt="IDS network analyzer"
+            />
+            <img src="../assets/ids/info_screen.png" alt="IDS info screen" />
+          </div>
+          <h3>Intrusion Detection System</h3>
+          <p class="projectDescription">
+            A robust rule-based intrusion detection system that leverages
+            regular expressions and log parsing to identify and prevent
+            malicious activities in real-time. Although I was responsible for
+            the logic behind the regex and log parsing algorithms, the
+            presentation and user interface were not within my responsibilities.
+          </p>
+          <button
+            class="viewButton"
+            onclick="window.open('https://github.com/omarsawaf1/IDS', '_blank')"
+          >
+            View
+          </button>
+        </div>
+        <div class="card">
+          <div class="projectImg">
+            <img src="../assets/FEHU/home.png" alt="Home page" />
+            <img src="../assets/FEHU/codeforces.png" alt="Codeforces page" />
+            <img src="../assets/FEHU/leaderboards.png" alt="leaderboards" />
+          </div>
+          <h3>FEHU Programing Cental Hub</h3>
+          <p>Under Development</p>
+          <p class="projectDescription">
+            Currently working on a front-end website for the competitive
+            programming community in my college to help other and increase
+            collaborations. The website is designed to collect contest data from
+            various websites like codeforces and gather it in one place.Also
+            want to make a blog where we can write roadmaps and solve
+            programming questions.
+          </p>
+          <button
+            class="viewButton"
+            onclick="window.open('https://github.com/omarsawaf1/FEHU-Central', '_blank')"
+          >
+            View
+          </button>
+        </div>
       </div>
     </div>
     <div class="contactSection" id="contact">
@@ -122,8 +286,8 @@
         <h1>Contact Me</h1>
       </div>
       <div class="contactList">
-        <h4>oviral.vibeso@gmail.com</h4>
-        <h4>+20 01062882023</h4>
+        <h4>Email: oviralvibeso@gmail.com</h4>
+        <h4>Whatsapp: +20 01062882023</h4>
       </div>
     </div>
 
@@ -188,8 +352,6 @@
             href="https://www.linkedin.com/in/omar-mohamed-hatem-057a8025b/"
             target="_blank"
           >
-            <!-- x="0px"
-              y="0px" -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               role="img"
