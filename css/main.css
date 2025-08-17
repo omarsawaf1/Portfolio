@@ -15,7 +15,13 @@
   --accent-color-cyber: #3b82f6;
   --accent-color-me: #ff5733;
   --accent-color-programing: #f7df1e;
-  --cyber-gradient: linear-gradient(to right, #3b82f6, #8b5cf6);
+  --cyber-gradient: linear-gradient(20deg, cyan, magenta);
+  --brand-gradient: linear-gradient(
+    90deg,
+    rgba(255, 87, 51, 1) 0%,
+    rgba(59, 130, 246, 1) 50%,
+    rgba(247, 223, 30, 1) 100%
+  );
   --card-bg: rgba(8, 12, 20, 0.85);
   --accent-1: #00fff0; /* neon cyan */
   --accent-2: #3b82f6; /* blue */
@@ -39,13 +45,14 @@ body[data-light-theme="true"] {
   --accent-3: #f7df1e; /* yellow */
   --accent-glow: rgba(59, 130, 246, 0.14);
   --nav-bg: rgba(255, 255, 255, 0.9);
-  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-bg: rgba(255, 255, 255, 1);
   --shadow: 0 10px 30px rgba(10, 20, 40, 0.08);
-  --background-image: url("../assets/otl_me_background_light2.png");
+  --background-image: url("../assets/otl_me_background_light.png");
 }
 
 * {
   font-family: var(--font-family);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -53,27 +60,20 @@ body {
   color: var(--primary-color);
   background: var(--background-color);
   min-height: 100vh;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; */
 }
 
 h1,
 h2 {
   color: var(--primary-color);
-  text-align: center;
+  /* text-align: center; */
 }
 
 a {
   text-decoration: none;
-  color: var(--nav-color);
+  /* color: var(--nav-color); */
   /* transition: color 0.3s ease; */
 }
 
-/* a:hover {
-  color: var(--hover-color);
-} */
 p {
   color: var(--primary-color);
   text-align: center;
@@ -120,12 +120,7 @@ body[data-light-theme="false"] .logoContainer::before {
   /* translate: -50% -50%; */
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 87, 51, 1) 0%,
-    rgba(59, 130, 246, 1) 50%,
-    rgba(247, 223, 30, 1) 100%
-  );
+  /* background: var(--brand-gradient); */
   filter: blur(15px);
   opacity: 0.5;
   border-radius: 80px;
@@ -210,9 +205,11 @@ body[data-light-theme="true"] #theme-switch svg:last-child {
 
 /*------- Title content ------- */
 
-.titleSection {
-  /* display: flex; */
-  /* flex-direction: column; */
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18vh;
   position: relative;
   height: 100vh;
   background-image: var(--background-image);
@@ -220,16 +217,16 @@ body[data-light-theme="true"] #theme-switch svg:last-child {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  z-index: -1;
+  padding: 100px 200px;
 }
 #mainTitle {
   display: inline-block;
   color: var(--primary-color);
-  text-align: left;
+  text-align: center;
   font-size: 5rem;
-  margin-left: 15%;
-  margin-top: 8%;
-  letter-spacing: 3px;
+  /* margin-left: 15%; */
+  /* margin-top: 10%; */
+  letter-spacing: 2px;
 }
 #portfolioWord {
   background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
@@ -240,23 +237,29 @@ body[data-light-theme="true"] #theme-switch svg:last-child {
 
 #jobTitleContainer {
   animation: 6s float ease-in-out infinite;
+  max-width: fit-content;
 }
 
 .jobTitle {
-  padding: 0px 80px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  display: inline-block;
-  position: absolute;
-  left: 16%;
-  top: 45%;
   border: solid 2px transparent;
   border-radius: 80px;
-  /* animation: 6s float ease-in-out infinite; */
   background: var(--card-bg);
+  padding: 0px 5vw;
 }
-.jobTitle h2 {
-  color: var(--primary-color);
+.jobTitle h1 {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  font-size: 2rem;
+  text-align: center;
+}
+#fName {
+  color: var(--accent-color-me);
+}
+#mName1 {
+  color: var(--accent-1);
+}
+#mName2 {
+  color: var(--accent-color-programing);
 }
 
 @property --angle {
@@ -274,7 +277,7 @@ body[data-light-theme="true"] #theme-switch svg:last-child {
   translate: -50% -50%;
   width: 100%;
   height: 100%;
-  padding: 4px;
+  padding: 2px;
   border-radius: 80px;
   background: linear-gradient(
     var(--angle),
@@ -282,8 +285,6 @@ body[data-light-theme="true"] #theme-switch svg:last-child {
     rgba(59, 130, 246, 1) 50%,
     rgba(247, 223, 30, 1) 100%
   );
-  /* border-radius: 1em; */
-  /* box-shadow: 0 0 50px rgba(59, 130, 246, 1); */
   z-index: -1;
   animation: 3s spin linear infinite;
 }
@@ -292,6 +293,36 @@ body[data-light-theme="true"] #theme-switch svg:last-child {
   filter: blur(25px);
   opacity: 0.9;
 }
+.jobTitle ul {
+  display: flex;
+  flex-flow: column nowrap;
+  /* align-items: start; */
+  overflow: hidden;
+  white-space: nowrap;
+  height: 2.3rem;
+  list-style: none;
+}
+.jobTitle ul li {
+  animation: slide calc(2 * 3 * 2s) steps(2) infinite;
+}
+.jobTitle ul li span {
+  font-weight: 600;
+  display: inline-block;
+  font-size: 2rem;
+  /* margin: 0px; */
+  width: 0%;
+  white-space: nowrap;
+  border-right: solid 2px var(--accent-1);
+  background: var(--cyber-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: blink 0.85s step-end infinite,
+    typing 3s steps(21) infinite alternate;
+  /* animation: typing 3s steps(22) infinite alternate; */
+}
+
+/* ------- Keyframes ------- */
 
 @keyframes spin {
   from {
@@ -312,9 +343,30 @@ body[data-light-theme="true"] #theme-switch svg:last-child {
     transform: translateY(0);
   }
 }
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  90%,
+  100% {
+    width: 101%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes slide {
+  100% {
+    transform: translateY(-200%);
+  }
+}
+
 /* ------- About Section ------- */
 
-.aboutSection {
+.about {
   height: 90vh;
   display: flex;
   align-items: center;
@@ -330,7 +382,7 @@ body[data-light-theme="true"] #theme-switch svg:last-child {
   letter-spacing: 3px;
 }
 
-.aboutSection p {
+.about p {
   width: 60%;
   text-align: center;
   font-size: 1.2rem;
@@ -350,6 +402,12 @@ body[data-light-theme="true"] #theme-switch svg:last-child {
 #codingImg:hover {
   transform: scale(1.2);
 }
+
+/* ------- Skills Section ------- */
+
+/* ------- Setvices Section ------- */
+
+/* ------- Contact Section ------- */
 
 /* footer */
 footer {
@@ -454,7 +512,7 @@ footer p {
   #navLinks {
     justify-content: center;
   }
-  .aboutSection {
+  .about {
     flex-direction: column;
     align-items: center;
   }
