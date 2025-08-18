@@ -10,9 +10,13 @@
   <body data-light-theme="false">
     <header>
       <a href="index.html">
-        <div class="logoContainer">
-          <img src="../assets/OTL_logo.png" alt="OTL Logo" class="logo" />
-        </div>
+        <!-- <div class="logoContainer"> -->
+        <img
+          src="../assets/pictures/OTL_logo.png"
+          alt="OTL Logo"
+          class="logo"
+        />
+        <!-- </div> -->
       </a>
       <nav>
         <ul id="navLinks">
@@ -94,7 +98,7 @@
       </div>
     </header>
     <!-- Main Content -->
-    <section class="title" id="home">
+    <section class="homeTitle" id="home">
       <h1 id="mainTitle">
         Welcome to <br />
         My <span id="portfolioWord">Portfolio</span>
@@ -113,9 +117,9 @@
         </div>
       </div>
     </section>
-    <div class="about" id="about">
+    <section class="about" id="about">
       <div class="aboutTitle">
-        <h1>Who am I</h1>
+        <h1>Who am <span>I</span></h1>
         <p>
           I am a frontend developer with a passion for creating user-friendly
           and visually appealing websites. With a strong foundation in HTML,
@@ -126,48 +130,52 @@
           that meet the needs of modern web developers.
         </p>
       </div>
-      <img src="../assets/coding.png" alt="coding image" id="codingImg" />
-    </div>
-    <div class="skill" id="skill">
-      <div class="educationTitle">
-        <h1>My Background</h1>
+      <img
+        src="../assets/pictures/coding.png"
+        alt="coding image"
+        id="codingImg"
+      />
+    </section>
+    <section class="skill" id="skill">
+      <h1 class="title">My Background</h1>
+      <div class="backgroundContainer">
+        <div class="educationList">
+          <button>Education</button>
+          <p>
+            Helwan University, Faculty of Engineering <br />
+            Bachelor of Communication & Information
+          </p>
+        </div>
+        <div class="skillList">
+          <button>Skills</button>
+          <p>
+            As a frontend developer, I have a wide range of skills that enable
+            me to create visually appealing and user-friendly websites. I am
+            proficient in HTML, CSS, and JavaScript, and have experience with
+            popular frameworks such as React and Angular. I also have expertise
+            in creating high-quality presentations, including PowerPoint and
+            Google Slides. I am a detail-oriented and organized individual with
+            strong communication skills, which enables me to effectively
+            collaborate with clients and team members to achieve project goals.
+          </p>
+        </div>
+        <div class="workList">
+          <button>Work Experience</button>
+          <p>
+            As a skilled frontend developer, I have a strong background in
+            creating professional and visually appealing websites. I have
+            successfully developed two websites, utilizing my expertise in HTML,
+            CSS, and JavaScript. Additionally, I have experience with Java
+            application development, and have worked as a cybersecurity analyst,
+            providing top-notch security solutions to clients.
+          </p>
+        </div>
       </div>
-      <div class="educationList">
-        <button>Education</button>
-        <p>
-          Helwan University, Faculty of Engineering <br />
-          Bachelor of Communication & Information
-        </p>
-      </div>
-      <div class="skillList">
-        <button>Skills</button>
-        <p>
-          As a frontend developer, I have a wide range of skills that enable me
-          to create visually appealing and user-friendly websites. I am
-          proficient in HTML, CSS, and JavaScript, and have experience with
-          popular frameworks such as React and Angular. I also have expertise in
-          creating high-quality presentations, including PowerPoint and Google
-          Slides. I am a detail-oriented and organized individual with strong
-          communication skills, which enables me to effectively collaborate with
-          clients and team members to achieve project goals.
-        </p>
-      </div>
-      <div class="educationList">
-        <button>Work Experience</button>
-        <p>
-          As a skilled frontend developer, I have a strong background in
-          creating professional and visually appealing websites. I have
-          successfully developed two websites, utilizing my expertise in HTML,
-          CSS, and JavaScript. Additionally, I have experience with Java
-          application development, and have worked as a cybersecurity analyst,
-          providing top-notch security solutions to clients.
-        </p>
-      </div>
-    </div>
-    <div class="service" id="service">
-      <div class="serviceTitle">
-        <h1>Services</h1>
-      </div>
+    </section>
+    <section class="service" id="service">
+      <!-- <div class="serviceTitle"> -->
+      <h1 class="title">Services</h1>
+      <!-- </div> -->
       <div class="serviceList">
         <div class="card">
           <div class="serviceImg"></div>
@@ -196,15 +204,15 @@
           </p>
         </div>
       </div>
-    </div>
-    <div class="project" id="project">
-      <div class="projectTitle">
-        <h1>Projects</h1>
-      </div>
+    </section>
+    <section class="project" id="project">
+      <!-- <div class="projectTitle"> -->
+      <h1 class="title">Projects</h1>
+      <!-- </div> -->
       <div class="projectList">
         <div class="card">
           <div class="projectImg">
-            <img src="../assets/Ecom website/Jawda_Ecom1.jpeg" alt="Login" />
+            <!-- <img src="../assets/Ecom website/Jawda_Ecom1.jpeg" alt="Login" />
             <img src="../assets/Ecom website/Jawda_Ecom2.jpeg" alt="Home" />
             <img src="../assets/Ecom website/Jawda_Ecom3.jpeg" alt="Deals" />
             <img
@@ -215,7 +223,7 @@
               src="../assets/Ecom website/Jawda_Ecom5.jpeg"
               alt="Electronics"
             />
-            <img src="../assets/Ecom website/Jawda_Ecom6.jpeg" alt="Cart" />
+            <img src="../assets/Ecom website/Jawda_Ecom6.jpeg" alt="Cart" /> -->
           </div>
           <h3>E-commerce Website</h3>
           <p class="projectDescription">
@@ -233,7 +241,7 @@
         </div>
         <div class="card">
           <div class="projectImg">
-            <img
+            <!-- <img
               src="../assets/ids/welcome_screen.png"
               alt="IDS welcome screen"
             />
@@ -243,7 +251,7 @@
               src="../assets/ids/network_analyzer.png"
               alt="IDS network analyzer"
             />
-            <img src="../assets/ids/info_screen.png" alt="IDS info screen" />
+            <img src="../assets/ids/info_screen.png" alt="IDS info screen" /> -->
           </div>
           <h3>Intrusion Detection System</h3>
           <p class="projectDescription">
@@ -262,9 +270,9 @@
         </div>
         <div class="card">
           <div class="projectImg">
-            <img src="../assets/FEHU/home.png" alt="Home page" />
+            <!-- <img src="../assets/FEHU/home.png" alt="Home page" />
             <img src="../assets/FEHU/codeforces.png" alt="Codeforces page" />
-            <img src="../assets/FEHU/leaderboards.png" alt="leaderboards" />
+            <img src="../assets/FEHU/leaderboards.png" alt="leaderboards" /> -->
           </div>
           <h3>FEHU Programing Cental Hub</h3>
           <p>Under Development</p>
@@ -284,8 +292,8 @@
           </button>
         </div>
       </div>
-    </div>
-    <div class="contact" id="contact">
+    </section>
+    <section class="contact" id="contact">
       <div class="contactTitle">
         <h1>Contact Me</h1>
       </div>
@@ -293,7 +301,7 @@
         <h4>Email: oviralvibeso@gmail.com</h4>
         <h4>Whatsapp: +20 01062882023</h4>
       </div>
-    </div>
+    </section>
 
     <footer>
       <div class="footerContent">
