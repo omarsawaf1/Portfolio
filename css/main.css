@@ -23,7 +23,7 @@
   --accent-glow: rgba(0, 255, 240, 0.08);
   --shadow: 0 12px 40px rgba(2, 8, 20, 0.6);
   --gap: 2rem;
-  --background-image-home: url("../assets/pictures/otl_me_background2.png");
+  --background-image-home: url("../assets/pictures/otl_me_background2.jpg");
   --background-image-about: url("../assets/pictures/canva1.jpg");
 }
 
@@ -44,8 +44,8 @@ body[data-light-theme="true"] {
   --title-bg: rgba(255, 255, 255, 1);
   --card-bg: rgba(255, 255, 255, 1);
   --shadow: 0 10px 30px rgba(10, 20, 40, 0.08);
-  --background-image-home: url("../assets/pictures/otl_me_background_light.png");
-  --background-image-about: url("../assets/pictures/light_background.jpg");
+  --background-image-home: url("../assets/pictures/otl_me_background_light.jpg");
+  --background-image-about: url("../assets/pictures/squares_light_background.jpg");
 }
 
 * {
@@ -67,6 +67,22 @@ a {
 p {
   color: var(--primary-color);
   text-align: center;
+}
+
+#usp {
+  /* quotes: "«" "»"; */
+  font-size: 1rem;
+}
+#usp::before {
+  content: open-quote;
+  font-size: 3em; /* Larger opening quote mark */
+  vertical-align: middle;
+}
+
+#usp::after {
+  content: close-quote;
+  font-size: 3em; /* Larger closing quote mark */
+  vertical-align: middle;
 }
 
 /* remove later */
@@ -184,6 +200,7 @@ body[data-light-theme="true"] #theme-switch svg:last-child {
   background-position: center;
   background-attachment: fixed;
   padding: 50px 0px;
+  /* background-color: #050409; */
 }
 #mainTitle {
   display: inline-block;
