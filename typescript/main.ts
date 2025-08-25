@@ -45,8 +45,12 @@ function toggleMenu() {
   mobileNav?.setAttribute("aria-hidden", String(!isOpen));
 
   if (isOpen) {
+    document.body.style.overflow = "hidden"; // Prevent scrolling
+    main?.addEventListener("click", toggleMenu);
     document.addEventListener("keydown", handleEscape);
   } else {
+    document.body.style.overflow = ""; // Restore scrolling
+    main?.removeEventListener("click", toggleMenu);
     document.removeEventListener("keydown", handleEscape);
   }
 }
@@ -59,7 +63,7 @@ navLinks?.forEach((link) => {
 });
 
 // click outside to close
-main?.addEventListener("click", toggleMenu);
+// main?.addEventListener("click", toggleMenu);
 
 // close on Escape
 function handleEscape(e: KeyboardEvent) {

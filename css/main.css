@@ -53,6 +53,10 @@ body[data-light-theme="true"] {
   scroll-behavior: smooth;
   color: var(--primary-color);
 }
+/* html {
+  overscroll-behavior-y: none; /* prevent vertical rubber-banding 
+overscroll-behavior-x: none; /* prevent horizontal rubber-banding 
+} */
 
 body {
   margin: 0px;
@@ -739,13 +743,13 @@ footer p {
     height: 100vh;
     background-color: var(--nav-footer-bg-color);
     backdrop-filter: blur(10px);
-    transform: translateX(100%);
-    transition: transform 0.8s ease-out;
+    /* transform: translateX(100%);
+    transition: transform 0.8s ease-out; */
     z-index: 888;
   }
-  #navLinks.active {
+  /* #navLinks.active {
     transform: translateX(0%);
-  }
+  } */
 
   #mobileNavBtn {
     display: block;

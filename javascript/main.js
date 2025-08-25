@@ -37,9 +37,13 @@ function toggleMenu() {
     hamburger === null || hamburger === void 0 ? void 0 : hamburger.setAttribute("aria-expanded", String(isOpen));
     mobileNav === null || mobileNav === void 0 ? void 0 : mobileNav.setAttribute("aria-hidden", String(!isOpen));
     if (isOpen) {
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+        main === null || main === void 0 ? void 0 : main.addEventListener("click", toggleMenu);
         document.addEventListener("keydown", handleEscape);
     }
     else {
+        document.body.style.overflow = ""; // Restore scrolling
+        main === null || main === void 0 ? void 0 : main.removeEventListener("click", toggleMenu);
         document.removeEventListener("keydown", handleEscape);
     }
 }
@@ -49,7 +53,7 @@ navLinks === null || navLinks === void 0 ? void 0 : navLinks.forEach((link) => {
     link.addEventListener("click", toggleMenu);
 });
 // click outside to close
-main === null || main === void 0 ? void 0 : main.addEventListener("click", toggleMenu);
+// main?.addEventListener("click", toggleMenu);
 // close on Escape
 function handleEscape(e) {
     if (e.key === "Escape")
