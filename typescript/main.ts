@@ -97,3 +97,77 @@ backgroundBtn?.forEach((btn: HTMLButtonElement | null) => {
 });
 
 // ------- End of Background Buttons -------
+
+// ------- DOM adding projects -------
+
+const projectList = document.getElementById("projectList");
+
+fetch("../assets/projects.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then((projects) => {
+    projects.forEach(
+      (project: {
+        name: string;
+        description: string;
+        images: string[];
+        link: string;
+      }) => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const projectImg = document.createElement("div");
+        projectImg.classList.add("projectImg");
+        card.appendChild(projectImg);
+
+        project.images.forEach((image) => {
+          const img = document.createElement("img");
+          img.src = image;
+          img.loading = "lazy";
+          img.alt = project.name;
+          projectImg.appendChild(img);
+        });
+
+        const title = document.createElement("h3");
+        title.textContent = project.name;
+        card.appendChild(title);
+
+        const description = document.createElement("p");
+        description.classList.add("projectDescription");
+        description.textContent = project.description;
+        card.appendChild(description);
+
+        const button = document.createElement("button");
+        button.classList.add("viewButton");
+        button.textContent = "View";
+        button.addEventListener("click", () => {
+          window.open(project.link, "_blank");
+        });
+        card.appendChild(button);
+
+        projectList?.appendChild(card);
+      }
+    );
+  })
+  .catch((error) => {
+    console.error("Error fetching projects:", error);
+  });
+
+// ------- End of projects DOM -------
+
+// ------- Carousel -------
+
+const projectCarousel: NodeListOf<HTMLElement> =
+  document.querySelectorAll(".projectImg");
+
+// async function updateCarousel() {
+//   for (let i = 0; i < projectCarousel.length; i++) {
+//     projectCarousel[i].src = `./images/${i}.png`;
+//   }
+// }
+
+// ------- End of Carousel -------
