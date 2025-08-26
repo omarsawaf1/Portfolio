@@ -1,6 +1,6 @@
 body {
   background: #000;
-  /* background-image: url("../assets/pictures/404_grey.png");
+  /* background-image: url("/Portfolio/assets/pictures/404_grey.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@ body[data-light-theme="true"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 }
 
@@ -27,7 +27,7 @@ body[data-light-theme="true"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 }
 

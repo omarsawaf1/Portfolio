@@ -8,115 +8,121 @@
     <link
       rel="icon"
       type="image/png"
-      href="./images/favicon-96x96.png"
+      href="/Portfolio/images/favicon-96x96.png"
       sizes="96x96"
     />
-    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
-    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/Portfolio/images/favicon.svg"
+    />
+    <link rel="shortcut icon" href="/Portfolio/images/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./images/apple-touch-icon.png"
+      href="/Portfolio/images/apple-touch-icon.png"
     />
     <meta name="apple-mobile-web-app-title" content="MyPortfolio" />
-    <link rel="manifest" href="./images/site.webmanifest" />
+    <link rel="manifest" href="/Portfolio/images/site.webmanifest" />
     <title>404 Page Not Found</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/404.css" />
+    <link rel="stylesheet" href="/Portfolio/css/main.css" />
+    <link rel="stylesheet" href="/Portfolio/css/404.css" />
   </head>
   <body data-light-theme="false">
     <header>
       <a href="/Portfolio/">
-        <!-- <div class="logoContainer"> -->
-        <img src="./assets/pictures/OTL_logo.png" alt="OTL Logo" class="logo" />
-        <!-- </div> -->
+        <img
+          src="/Portfolio/assets/pictures/OTL_logo.png"
+          alt="OTL Logo"
+          class="logo"
+        />
       </a>
       <nav>
         <ul id="navLinks">
           <li class="navMain">
             <a href="/Portfolio/">
-              <button class="navButton">
+              <span class="navButton">
                 <h3 class="navHeader">Home</h3>
-              </button>
+              </span>
             </a>
           </li>
           <li class="navMain">
             <a href="/Portfolio/#about">
-              <button class="navButton">
+              <span class="navButton">
                 <h3 class="navHeader">About</h3>
-              </button>
+              </span>
             </a>
           </li>
           <li class="navMain">
-            <a href="/Portfolio/#skill">
-              <button class="navButton">
-                <h3 class="navHeader">Skills</h3>
-              </button>
+            <a href="/Portfolio/#background">
+              <span class="navButton">
+                <h3 class="navHeader">Background</h3>
+              </span>
             </a>
           </li>
-          <!-- <li class="navMain">
-          <button class="navButton" id="worknButton">
-            <a href="#work"><h3>Work Experience</h3></a>
-          </button>
-        </li> -->
           <li class="navMain">
             <a href="/Portfolio/#service">
-              <button class="navButton">
+              <span class="navButton">
                 <h3 class="navHeader">Services</h3>
-              </button>
+              </span>
             </a>
           </li>
           <li class="navMain">
             <a href="/Portfolio/#project">
-              <button class="navButton">
+              <span class="navButton">
                 <h3 class="navHeader">Projects</h3>
-              </button>
+              </span>
             </a>
           </li>
           <li class="navMain">
             <a href="/Portfolio/#contact">
-              <button class="navButton">
+              <span class="navButton">
                 <h3 class="navHeader">Contact</h3>
-              </button>
+              </span>
             </a>
           </li>
         </ul>
       </nav>
 
-      <div>
-        <button id="theme-switch">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="#FC9601"
-          >
-            <path
-              d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="#000"
-          >
-            <path
-              d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"
-            />
-          </svg>
-        </button>
-      </div>
+      <button id="themeSwitch">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#FC9601"
+        >
+          <path
+            d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#000"
+        >
+          <path
+            d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"
+          />
+        </svg>
+      </button>
+      <div
+        id="mobileNavBtn"
+        aria-label="Mobile Navigation"
+        aria-controls="navLinks"
+      ></div>
     </header>
+
     <div class="error">
       <section class="errorContainer">
-        <img
-          src="./assets/pictures/404_grey.png"
+        <!-- <img
+          src="/Portfolio/assets/pictures/404_grey.png"
           alt="404 Error"
           class="errorImg"
-        />
+        /> -->
+        <h1>Error</h1>
         <h1>404</h1>
         <h2>Page Not Found</h2>
         <p>
@@ -126,6 +132,6 @@
         <a href="/Portfolio/">Go to Homepage</a>
       </section>
     </div>
-    <script src="./javascript/main.js"></script>
+    <script src="/Portfolio/javascript/main.js"></script>
   </body>
 </html>

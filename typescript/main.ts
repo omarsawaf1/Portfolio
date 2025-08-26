@@ -102,7 +102,7 @@ backgroundBtn?.forEach((btn: HTMLButtonElement | null) => {
 
 const projectList = document.getElementById("projectList");
 
-fetch("../assets/projects.json")
+fetch("/Portfolio/assets/projects.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

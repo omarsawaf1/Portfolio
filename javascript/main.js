@@ -82,7 +82,7 @@ backgroundBtn === null || backgroundBtn === void 0 ? void 0 : backgroundBtn.forE
 // ------- End of Background Buttons -------
 // ------- DOM adding projects -------
 const projectList = document.getElementById("projectList");
-fetch("../assets/projects.json")
+fetch("/Portfolio/assets/projects.json")
     .then((response) => {
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

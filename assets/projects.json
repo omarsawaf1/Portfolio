@@ -3,12 +3,12 @@
     "name": "E-commerce Website",
     "description": "An ecommerce website integrated with a backend and MySQL, designed to provide a seamless shopping experience for customers. Features include secure payment processing, product filtering, and a cart system for tracking purchases.",
     "images": [
-      "../assets/Ecom website/Jawda_Ecom1.jpeg",
-      "../assets/Ecom website/Jawda_Ecom2.jpeg",
-      "../assets/Ecom website/Jawda_Ecom3.jpeg",
-      "../assets/Ecom website/Jawda_Ecom4.jpeg",
-      "../assets/Ecom website/Jawda_Ecom5.jpeg",
-      "../assets/Ecom website/Jawda_Ecom6.jpeg"
+      "/Portfolio/assets/Ecom website/Jawda_Ecom1.jpeg",
+      "/Portfolio/assets/Ecom website/Jawda_Ecom2.jpeg",
+      "/Portfolio/assets/Ecom website/Jawda_Ecom3.jpeg",
+      "/Portfolio/assets/Ecom website/Jawda_Ecom4.jpeg",
+      "/Portfolio/assets/Ecom website/Jawda_Ecom5.jpeg",
+      "/Portfolio/assets/Ecom website/Jawda_Ecom6.jpeg"
     ],
     "link": "https://github.com/omarsawaf1/Ecom"
   },
@@ -16,11 +16,11 @@
     "name": "Intrusion Detection System",
     "description": "A robust rule-based intrusion detection system using Java that leverages regular expressions and log parsing to identify and prevent malicious activities in real-time. Although I was responsible for the logic behind the regex and log parsing algorithms, the presentation and user interface were not within my responsibilities.",
     "images": [
-      "../assets/ids/welcome_screen.png",
-      "../assets/ids/login.png",
-      "../assets/ids/main.png",
-      "../assets/ids/network_analyzer.png",
-      "../assets/ids/info_screen.png"
+      "/Portfolio/assets/ids/welcome_screen.png",
+      "/Portfolio/assets/ids/login.png",
+      "/Portfolio/assets/ids/main.png",
+      "/Portfolio/assets/ids/network_analyzer.png",
+      "/Portfolio/assets/ids/info_screen.png"
     ],
     "link": "https://github.com/omarsawaf1/IDS"
   },
@@ -28,9 +28,9 @@
     "name": "FEHU Programing Cental Hub",
     "description": "Currently working on a frontend website for the competitive programming community in my college to help other and increase collaborations. The website is designed to collect contest data from various websites like codeforces and gather it in one place. Also want to make a blog where we can write roadmaps and solve programming questions.",
     "images": [
-      "../assets/FEHU/home.png",
-      "../assets/FEHU/codeforces.png",
-      "../assets/FEHU/leaderboards.png"
+      "/Portfolio/assets/FEHU/home.png",
+      "/Portfolio/assets/FEHU/codeforces.png",
+      "/Portfolio/assets/FEHU/leaderboards.png"
     ],
     "link": "https://github.com/omarsawaf1/FEHU-Central"
   }
