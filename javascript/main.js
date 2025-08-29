@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 console.log(`  
      █████╗ ████████╗██╗
     ██╔══██║╚══██╔══╝██║░░░░░
@@ -79,56 +88,133 @@ backgroundBtn === null || backgroundBtn === void 0 ? void 0 : backgroundBtn.forE
         btn.classList.add("active");
     });
 });
-// ------- End of Background Buttons -------
-// ------- DOM adding projects -------
 const projectList = document.getElementById("projectList");
-fetch("/Portfolio/assets/projects.json")
-    .then((response) => {
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-})
-    .then((projects) => {
-    projects.forEach((project) => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-        const projectImg = document.createElement("div");
-        projectImg.classList.add("projectImg");
-        card.appendChild(projectImg);
-        project.images.forEach((image) => {
-            const img = document.createElement("img");
-            img.src = image;
-            img.loading = "lazy";
-            img.alt = project.name;
-            projectImg.appendChild(img);
-        });
-        const title = document.createElement("h3");
-        title.textContent = project.name;
-        card.appendChild(title);
-        const description = document.createElement("p");
-        description.classList.add("projectDescription");
-        description.textContent = project.description;
-        card.appendChild(description);
-        const button = document.createElement("button");
-        button.classList.add("viewButton");
-        button.textContent = "View";
-        button.addEventListener("click", () => {
-            window.open(project.link, "_blank");
-        });
-        card.appendChild(button);
-        projectList === null || projectList === void 0 ? void 0 : projectList.appendChild(card);
+function loadProjects() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const res = yield fetch("/Portfolio/assets/projects.json");
+            if (!res.ok)
+                throw new Error(`Fetch failed: ${res.status}`);
+            const projects = yield res.json();
+            projects.forEach(buildProjectCard);
+        }
+        catch (err) {
+            console.error("Error loading projects:", err);
+        }
     });
-})
-    .catch((error) => {
-    console.error("Error fetching projects:", error);
-});
-// ------- End of projects DOM -------
-// ------- Carousel -------
-const projectCarousel = document.querySelectorAll(".projectImg");
-// async function updateCarousel() {
-//   for (let i = 0; i < projectCarousel.length; i++) {
-//     projectCarousel[i].src = `./images/${i}.png`;
-//   }
-// }
+}
+loadProjects();
+// ------- Card + Carousel Builder -------
+function buildProjectCard(project) {
+    if (!projectList)
+        return;
+    // Card wrapper
+    const card = document.createElement("div");
+    card.className = "card";
+    // Carousel container
+    const carouselContainer = document.createElement("div");
+    carouselContainer.className = "carouselContainer";
+    card.appendChild(carouselContainer);
+    // Slides wrapper
+    const slidesWrapper = document.createElement("div");
+    slidesWrapper.className = "projectImg";
+    carouselContainer.appendChild(slidesWrapper);
+    // Navigation dots container
+    const navDots = document.createElement("div");
+    navDots.className = "carouselNav";
+    // Arrows
+    const createArrow = (dir) => {
+        const btn = document.createElement("button");
+        btn.classList.add("carouselArrow", dir + "Arrow");
+        btn.setAttribute("aria-label", dir === "left" ? "Previous slide" : "Next slide");
+        const img = document.createElement("img");
+        img.className = "carouselArrowImg";
+        img.src = `/Portfolio/assets/svg/${dir}_arrow.svg`;
+        img.alt = dir === "left" ? "◀" : "▶";
+        btn.appendChild(img);
+        return btn;
+    };
+    const leftArrow = createArrow("left");
+    const rightArrow = createArrow("right");
+    carouselContainer.append(leftArrow, slidesWrapper, rightArrow, navDots);
+    // Slide images & dots
+    project.images.forEach((url, i) => {
+        // Slide
+        const img = document.createElement("img");
+        img.src = url;
+        img.loading = "lazy";
+        img.alt = project.name + " screenshot";
+        slidesWrapper.appendChild(img);
+        // Dot
+        const dot = document.createElement("button");
+        dot.className = "carouselDot";
+        dot.setAttribute("aria-label", `View slide ${i + 1}`);
+        navDots.appendChild(dot);
+    });
+    // Title, description, button
+    const title = document.createElement("h3");
+    title.textContent = project.name;
+    const desc = document.createElement("p");
+    desc.className = "projectDescription";
+    desc.textContent = project.description;
+    const cta = document.createElement("button");
+    cta.className = "viewButton";
+    cta.textContent = "View";
+    cta.addEventListener("click", () => window.open(project.link, "_blank"));
+    card.append(title, desc, cta);
+    projectList.appendChild(card);
+    // Initialize this carousel’s behavior
+    initCarousel(slidesWrapper, leftArrow, rightArrow, navDots);
+}
+// ------- Carousel Logic per Container -------
+function initCarousel(slidesWrapper, leftBtn, rightBtn, navDots) {
+    const slides = Array.from(slidesWrapper.querySelectorAll("img"));
+    const dots = Array.from(navDots.querySelectorAll("button"));
+    let current = 0;
+    let timer;
+    function showSlide(idx) {
+        slides.forEach((s, i) => {
+            s.style.display = i === idx ? "block" : "none";
+            if (dots && dots[i]) {
+                dots[i].classList.toggle("active", i === idx);
+            }
+        });
+        current = idx;
+    }
+    function next() {
+        showSlide((current + 1) % slides.length);
+    }
+    function prev() {
+        showSlide((current - 1 + slides.length) % slides.length);
+    }
+    function resetTimer() {
+        clearInterval(timer);
+        timer = window.setInterval(next, 10000);
+    }
+    // Wire up controls
+    leftBtn.addEventListener("click", () => {
+        prev();
+        resetTimer();
+    });
+    rightBtn.addEventListener("click", () => {
+        next();
+        resetTimer();
+    });
+    dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+            showSlide(i);
+            resetTimer();
+        });
+    });
+    // Pause when tab is hidden
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden)
+            clearInterval(timer);
+        else
+            resetTimer();
+    });
+    // Start
+    showSlide(0);
+    timer = window.setInterval(next, 10000);
+}
 // ------- End of Carousel -------

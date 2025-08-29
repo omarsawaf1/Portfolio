@@ -19,7 +19,7 @@
   --card-bg: rgba(255, 255, 255, 0.1);
   --background-image-home: url("/Portfolio/assets/pictures/otl_me_background2.jpg");
   --background-image-about: url("/Portfolio/assets/pictures/canva1.jpg");
-  --ham-menu: url("/Portfolio/assets/menu.svg");
+  --ham-menu: url("/Portfolio/assets/svg/menu.svg");
   @media screen and (max-width: 640px) {
     --background-image-home: url("/Portfolio/assets/pictures/otl_me_background_mobile2.jpg");
   }
@@ -42,7 +42,7 @@ body[data-light-theme="true"] {
   --card-bg: rgba(255, 255, 255, 0.95);
   --background-image-home: url("/Portfolio/assets/pictures/otl_me_background_light.jpg");
   --background-image-about: url("/Portfolio/assets/pictures/squares_light_background.jpg");
-  --ham-menu: url("/Portfolio/assets/menu_light.svg");
+  --ham-menu: url("/Portfolio/assets/svg/menu_light.svg");
   @media screen and (max-width: 640px) {
     --background-image-home: url("/Portfolio/assets/pictures/otl_me_background_light_mobile.jpg");
   }
@@ -370,8 +370,6 @@ section {
   justify-content: space-around;
   /* flex-wrap: nowrap; */
   /* max-width: 100%; */
-  /* padding: 50px; */
-  /* gap: 1px; */
   position: relative;
   background-image: var(--background-image-about);
   background-repeat: no-repeat;
@@ -384,9 +382,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: 2rem; */
-  /* text-align: left; */
-  /* margin-bottom: 50px; */
   font-size: 2.5rem;
   letter-spacing: 3px;
   width: 55%;
@@ -403,7 +398,7 @@ section {
 }
 
 #about p {
-  width: max(75%, 35vh);
+  width: max(75%, 40vh);
   text-align: center;
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -469,34 +464,31 @@ section {
 /* ------- Skills Section ------- */
 
 #background {
-  /* height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  /* flex-wrap: nowrap; */
-  /* border-radius: 30%; */
-  /* gap: 10rem; */
-  /* position: relative; */
-  /* background-color: #212931; */
 }
+
+#backgroundImg {
+  /* flex-basis: 15%; */
+  background: var(--card-bg);
+  border-radius: 3rem;
+  min-height: 20%;
+  max-width: 20%;
+  /* max-width: 45%; */
+}
+
 .backgroundContainer {
   flex-basis: 60%;
-  border-radius: 10%;
+  /* flex-basis: 70%; */
+  border-radius: 3rem;
   display: flex;
   flex-direction: column;
-  /* justify-content: start; */
-  height: 1000px;
-
-  gap: 3rem;
-  height: 60vh;
+  gap: 2rem;
+  height: clamp(20vh, 3000px, 60vh);
   background-color: var(--card-bg);
-}
-#backgroundImg {
-  flex-basis: 15%;
-  background: var(--card-bg);
-  border-radius: 20%;
-  height: 70vh;
+  padding-bottom: 2rem;
 }
 
 .backgroundButton {
@@ -506,6 +498,7 @@ section {
   cursor: pointer;
   position: relative;
 }
+
 .backgroundButton:after {
   content: "";
   width: 100%;
@@ -575,15 +568,15 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .card {
   position: relative;
   /* width: 33.333%; */
   background: var(--card-bg);
-  padding: 18px;
+  padding: 1rem 1.15rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
   transition: transform 1s ease, box-shadow 1s ease,
@@ -596,10 +589,105 @@ section {
   box-shadow: 0 18px 50px rgba(2, 8, 20, 0.45);
 }
 
-.projectImg img {
+.carouselContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+.carouselArrow {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+.carouselArrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.rightArrow {
+  right: -10%;
+}
+.leftArrow {
+  left: -10%;
+}
+
+.carouselArrowImg {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
+  /* object-fit: contain; */
+}
+
+.projectImg {
+  width: calc((100% - 2rem) / 3);
+  height: 30vh;
+}
+
+/* .projectImg img {
+  display: none;
+} */
+.projectImg img {
+  /* display: block; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.carouselNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  margin-top: 10px;
+}
+.carouselDot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.carouselDot:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.carouselDot.active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.viewButton {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  color: white;
+  font-weight: 600;
+  font-size: medium;
+  transition: transform 0.5s, opacity 0.5s;
+}
+.viewButton:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
 }
 
 /* ------- Contact Section ------- */
@@ -802,7 +890,7 @@ footer p {
     right: 2rem;
     position: fixed;
 
-    background-image: url("/Portfolio/assets/red_close.svg");
+    background-image: url("/Portfolio/assets/svg/red_close.svg");
   }
 
   #about {
