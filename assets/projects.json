@@ -31,10 +31,10 @@
     "name": "FEHU Programing Cental Hub",
     "description": "Currently working on a frontend website for the competitive programming community in my college to help other and increase collaborations. The website is designed to collect contest data from various websites like codeforces and gather it in one place. Also want to make a blog where we can write roadmaps and solve programming questions.",
     "images": [
-      "/Portfolio/assets/FEHU/home_light.png",
-      "/Portfolio/assets/FEHU/home_dark.png",
-      "/Portfolio/assets/FEHU/codeforces.png",
-      "/Portfolio/assets/FEHU/leaderboards.png"
+      "/Portfolio/assets/fehu/home_light.png",
+      "/Portfolio/assets/fehu/home_dark.png",
+      "/Portfolio/assets/fehu/codeforces.png",
+      "/Portfolio/assets/fehu/leaderboards.png"
     ],
     "link": "https://github.com/omarsawaf1/FEHU-Central"
   }
