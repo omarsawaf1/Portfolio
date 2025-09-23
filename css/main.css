@@ -1,46 +1,56 @@
 /* -------------------- DARK THEME (Default) -------------------- */
-
+/* @font-face {
+  font-family: "Cormorant Garamond";
+  src: url("https://fonts.gstatic.com/s/cormorantgaramond/v15/5JwD7bmXn14uMpFq_Gukfn4H1_AwPkKSGgm0R5sUZi6l3Q1hPjY21HBvljdlAI2QF2CyZ0KL9yVM2B4M4K8DQsE.mp3lYTi92dN_TKwtQVAABwAQ.ttf")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} */
 :root {
-  --font-family: "Calisto MT", sans-serif;
-  --primary-color: #fff; /* text color; */
-  /* --background-color: linear-gradient(-90deg, #06070a 0%, #0e1320 100%); */
-  --background-color: #000;
-  --hover-bg-color: rgba(255, 255, 255, 0.2);
-  --nav-footer-bg-color: rgba(4, 7, 15, 0.6);
-  /* --footer-link-color: #ddd; */
+  /* --font-family: "Calisto MT", sans-serif; */
+  --font-family: "Cormorant Garamond", serif;
+  --primary-color: #e5e7eb; /* text color */
+  --background-color: #0b0f1a; /* richer dark */
+  --hover-bg-color: rgba(255, 255, 255, 0.08);
+  --nav-footer-bg-color: rgba(9, 13, 24, 0.7);
+  /* brand accents - do not change */
   --accent-color-cyber: #00fff0;
   --accent-color-me: #ff5733;
   --accent-color-programing: #f7df1e;
   --cyber-gradient: linear-gradient(-20deg, magenta, #00fff0);
-  --accent-1: #3b82f6; /* neon cyan */
-  --accent-2: #00fff0; /* blue */
+  /* utility accents used across UI (kept compatible with brand colors) */
+  --accent-1: #3b82f6; /* blue */
+  --accent-2: #00fff0; /* neon cyan */
   --accent-3: #7cff00; /* neon green */
-  --title-bg: rgba(8, 12, 20, 0.85);
-  --card-bg: rgba(255, 255, 255, 0.1);
-  --background-image-home: url("/Portfolio/assets/pictures/otl_me_background2.jpg");
+  --title-bg: rgba(10, 14, 25, 0.85);
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --transition-medium: 250ms ease;
+  --background-image-home: url("/Portfolio/assets/pictures/otl_me_background2.webp");
   --background-image-about: url("/Portfolio/assets/pictures/canva1.jpg");
   --ham-menu: url("/Portfolio/assets/svg/menu.svg");
   @media screen and (max-width: 640px) {
-    --background-image-home: url("/Portfolio/assets/pictures/otl_me_background_mobile2.jpg");
+    --background-image-home: url("/Portfolio/assets/pictures/otl_me_background_mobile2.webp");
   }
 }
 
 /* -------------------- LIGHT THEME (Energetic) -------------------- */
 body[data-light-theme="true"] {
-  /* --background-color: linear-gradient(180deg, #fff 0%, #f7fbff 100%); */
-  --background-color: #f5f5f5; /* A modern easy on eye background color */
-  --nav-footer-bg-color: rgba(255, 255, 255, 0.6);
-  --hover-bg-color: rgba(0, 0, 0, 0.1);
-  --primary-color: #000;
+  --background-color: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  --nav-footer-bg-color: rgba(255, 255, 255, 0.82);
+  --hover-bg-color: rgba(0, 0, 0, 0.06);
+  --primary-color: #0b0f1a;
   --accent-1: #ff5733; /* warm orange */
   --accent-2: #3b82f6; /* blue */
   --accent-3: #f7df1e; /* yellow */
   --accent-glow: rgba(59, 130, 246, 0.14);
   --programing-gradient: linear-gradient(-20deg, #f7df1e, #00fff0);
-  /* --nav-bg: rgba(255, 255, 255, 0.9); */
   --title-bg: rgba(255, 255, 255, 1);
-  --card-bg: rgba(255, 255, 255, 0.95);
-  --background-image-home: url("/Portfolio/assets/pictures/otl_me_background_light.jpg");
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --shadow: 0 10px 30px rgba(2, 8, 20, 0.15);
+  --transition-medium: 250ms ease;
+  --background-image-home: url("/Portfolio/assets/pictures/otl_me_background_light.webp");
   --background-image-about: url("/Portfolio/assets/pictures/squares_light_background.jpg");
   --ham-menu: url("/Portfolio/assets/svg/menu_light.svg");
   @media screen and (max-width: 640px) {
@@ -197,7 +207,7 @@ section {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: clamp(1.75rem, 3vw + 1rem, 3rem);
   letter-spacing: 2px;
   text-align: center;
 }
@@ -221,7 +231,7 @@ section {
 #mainTitle {
   display: inline-block;
   text-align: center;
-  font-size: 5rem;
+  font-size: clamp(2.25rem, 6vw + 1rem, 5rem);
   /* margin-left: 15%; */
   /* margin-top: 10%; */
   letter-spacing: 2px;
@@ -247,7 +257,7 @@ section {
 .jobTitle h1 {
   margin-top: 16px;
   margin-bottom: 0px;
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 2.5vw + 0.75rem, 2rem);
   text-align: center;
 }
 #fName {
@@ -306,7 +316,7 @@ section {
 .jobTitle ul li span {
   font-weight: 600;
   display: inline-block;
-  font-size: 2rem;
+  font-size: clamp(1rem, 2.5vw + 0.5rem, 2rem);
   /* margin: 0px; */
   width: 0%;
   white-space: nowrap;
@@ -398,7 +408,7 @@ section {
 }
 
 #about p {
-  width: max(75%, 40vh);
+  width: min(75%, 900px);
   text-align: center;
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -410,7 +420,7 @@ section {
 
 #codingImg {
   /* margin-right: 10%; */
-  width: max(30%, 30vh);
+  width: min(40%, 420px);
   border-radius: 10%;
   box-shadow: #3b82f6 0px 5px 25px;
   transition: transform 0.8s ease;
@@ -566,27 +576,40 @@ section {
 /* ------- Projects Section ------- */
 #projectList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: max(2rem, env(safe-area-inset-left));
+  padding-right: max(2rem, env(safe-area-inset-right));
+
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
 }
 
 .card {
   position: relative;
   /* width: 33.333%; */
   background: var(--card-bg);
-  padding: 1rem 1.15rem;
-  border-radius: 12px;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  border-radius: 16px;
   box-shadow: var(--shadow);
-  transition: transform 1s ease, box-shadow 1s ease,
-    background var(--transition-medium);
-  border: 1px solid rgba(255, 255, 255, 0.02);
+  transition: transform 220ms ease, box-shadow 220ms ease,
+    background var(--transition-medium), border-color var(--transition-medium);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-6px);
   box-shadow: 0 18px 50px rgba(2, 8, 20, 0.45);
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+body[data-light-theme="true"] .card {
+  border: 1px solid rgba(2, 8, 20, 0.08);
+  box-shadow: 0 6px 20px rgba(2, 8, 20, 0.08);
+}
+body[data-light-theme="true"] .card:hover {
+  box-shadow: 0 14px 34px rgba(2, 8, 20, 0.16);
+  border-color: rgba(59, 130, 246, 0.22);
 }
 
 .carouselContainer {
@@ -632,8 +655,9 @@ section {
 }
 
 .projectImg {
-  width: calc((100% - 2rem) / 3);
-  height: 30vh;
+  height: clamp(220px, 40vh, 420px);
+  width: calc(100% - 1rem);
+  object-fit: contain;
 }
 
 /* .projectImg img {
@@ -645,7 +669,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: contain;
 }
 
@@ -716,8 +740,8 @@ section {
 }
 .contactList img {
   /* margin-bottom: 4rem; */
-  width: 10em;
-  height: 10em;
+  width: clamp(6em, 8vw + 2em, 10em);
+  height: clamp(6em, 8vw + 2em, 10em);
   border-radius: 5px;
   object-fit: cover;
   /* object-position: center; */
@@ -845,8 +869,16 @@ footer p {
 }
 /* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
+  #projectList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
   header {
     padding: 1.15rem;
+  }
+  .logo {
+    width: 64px;
+    height: 30px;
   }
   #navLinks {
     display: none;
@@ -897,14 +929,64 @@ footer p {
     flex-direction: column;
     align-items: center;
   }
+  #home {
+    background-attachment: scroll; /* better performance on mobile */
+    gap: 10vh;
+    padding: 60px 0;
+  }
+  #about {
+    background-attachment: scroll;
+  }
+  #contact {
+    background-attachment: scroll;
+  }
 
   .contactList img {
     display: none;
+  }
+  .rightArrow {
+    right: -2%;
+  }
+  .leftArrow {
+    left: -2%;
   }
 }
 
 @media screen and (max-width: 400px) {
   #navLinks.active {
     width: 100%;
+  }
+  #projectList {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .card {
+    padding: 0 0.9rem;
+  }
+  .carouselArrow {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* Ensure only one job title line is visible on small screens */
+@media (max-width: 520px) {
+  .jobTitle ul {
+    height: calc(1.25rem * 1.2); /* match the line height below */
+    overflow: hidden;
+  }
+  .jobTitle ul li span {
+    font-size: 1.25rem; /* fixed so container height matches */
+    line-height: 1.2;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }

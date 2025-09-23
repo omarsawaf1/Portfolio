@@ -18,12 +18,12 @@
     "description": "A robust rule-based intrusion detection system using Java that leverages regular expressions and log parsing to identify and prevent malicious activities in real-time. Although I was responsible for the logic behind the regex and log parsing algorithms, the presentation and user interface were not within my responsibilities.",
     "images": [
       "/Portfolio/assets/ids/welcome_screen.webp",
-      "/Portfolio/assets/ids/login.png",
-      "/Portfolio/assets/ids/main.png",
-      "/Portfolio/assets/ids/network_analyzer_empty.png",
-      "/Portfolio/assets/ids/network_analyzer.png",
-      "/Portfolio/assets/ids/rules.png",
-      "/Portfolio/assets/ids/info_screen.png"
+      "/Portfolio/assets/ids/login.webp",
+      "/Portfolio/assets/ids/main.webp",
+      "/Portfolio/assets/ids/network_analyzer_empty.webp",
+      "/Portfolio/assets/ids/network_analyzer.webp",
+      "/Portfolio/assets/ids/rules.webp",
+      "/Portfolio/assets/ids/info_screen.webp"
     ],
     "link": "https://github.com/omarsawaf1/IDS"
   },
@@ -31,10 +31,10 @@
     "name": "FEHU Programing Cental Hub",
     "description": "Currently working on a frontend website for the competitive programming community in my college to help other and increase collaborations. The website is designed to collect contest data from various websites like codeforces and gather it in one place. Also want to make a blog where we can write roadmaps and solve programming questions.",
     "images": [
-      "/Portfolio/assets/fehu/home_light.png",
-      "/Portfolio/assets/fehu/home_dark.png",
-      "/Portfolio/assets/fehu/codeforces.png",
-      "/Portfolio/assets/fehu/leaderboards.png"
+      "/Portfolio/assets/fehu/home_light.webp",
+      "/Portfolio/assets/fehu/home_dark.webp",
+      "/Portfolio/assets/fehu/codeforces.webp",
+      "/Portfolio/assets/fehu/leaderboards.webp"
     ],
     "link": "https://github.com/omarsawaf1/FEHU-Central"
   }
