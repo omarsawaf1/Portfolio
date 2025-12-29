@@ -1,0 +1,136 @@
+#contact {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  position: relative;
+  background-image: var(--background-image-contact);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.contactList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.contactList img {
+  width: clamp(6em, 8vw + 2em, 10em);
+  height: clamp(6em, 8vw + 2em, 10em);
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  width: max(20%, 30vh);
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  border-radius: 30px;
+}
+
+.contactCard:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 18px 50px rgba(2, 8, 20, 0.45);
+}
+
+#email {
+  fill: var(--accent-1);
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--nav-footer-bg-color);
+  padding: 30px;
+  clear: both;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Logos / Socials */
+.socialsContainer {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.socialsContainer a {
+  background-color: white;
+  padding: 1em;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.socialsContainer a svg {
+  height: 22px;
+  position: absolute;
+}
+
+.socialsContainer a::before {
+  content: attr(data-social);
+  position: absolute;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-30px) rotate(25deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(0.42, 0, 0.44, 1.68);
+}
+
+.socialsContainer a:hover {
+  background-color: var(--accent-color);
+  fill: white;
+}
+
+.socialsContainer a::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--accent-color);
+  transform: translateY(0) rotate(25deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(0.42, 0, 0.44, 1.68);
+}
+
+.socialsContainer a:hover::before {
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+
+.socialsContainer a:hover::after {
+  transform: translateY(-42px) rotate(0);
+  opacity: 1;
+}

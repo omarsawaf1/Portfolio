@@ -1,0 +1,109 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--nav-footer-bg-color);
+  padding: 0 2.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 998;
+  gap: 1rem;
+}
+
+.logo {
+  width: 75px;
+  height: 35px;
+}
+
+#navLinks {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navButton {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.navButton::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, #0071ff, #33a8c7);
+  left: 0;
+  bottom: -2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.navButton:hover::after {
+  transform: scaleX(1);
+}
+
+.navHeader {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* Header Controls */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.headerBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.headerBtn:hover {
+  background-color: var(--hover-bg-color);
+  transform: scale(1.1);
+}
+
+#themeSwitch {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#themeSwitch svg:first-child {
+  display: none;
+}
+body[data-light-theme="true"] #themeSwitch svg:first-child {
+  display: block;
+}
+body[data-light-theme="true"] #themeSwitch svg:last-child {
+  display: none;
+}
+
+#mobileNavBtn {
+  display: none;
+}

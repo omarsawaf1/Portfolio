@@ -1,0 +1,260 @@
+/*------- Home Section ------- */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12vh;
+  position: relative;
+  background-image: var(--background-image-home);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px 0px;
+}
+
+#mainTitle {
+  display: inline-block;
+  text-align: center;
+  font-size: clamp(2.25rem, 6vw + 1rem, 5rem);
+  letter-spacing: 2px;
+}
+
+#portfolioWord {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#jobTitleContainer {
+  animation: 6s float ease-in-out infinite;
+}
+
+.jobTitle {
+  /* position: relative; */
+  z-index: 1;
+  border: solid 2px transparent;
+  border-radius: 80px;
+  background: #0b0f1a; /* Solid background to mask the spinning gradient inside */
+  background-clip: padding-box; /* Ensures background doesn't cover the border area */
+  padding: 10px 5vw;
+}
+
+/* Opaque background in light mode too */
+body[data-light-theme="true"] .jobTitle {
+  background: white;
+}
+
+.jobTitle::after,
+.jobTitle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 4px); /* Slightly larger */
+  height: calc(100% + 4px);
+  border-radius: 80px;
+  background: linear-gradient(
+    var(--angle),
+    rgba(255, 87, 51, 1) 0%,
+    rgba(59, 130, 246, 1) 50%,
+    rgba(247, 223, 30, 1) 100%
+  );
+  z-index: -1;
+  animation: 3s spin linear infinite;
+}
+
+.jobTitle::before {
+  filter: blur(25px);
+  opacity: 0.9;
+}
+
+.jobTitle h1 {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  font-size: clamp(1.25rem, 2.5vw + 0.75rem, 2rem);
+  text-align: center;
+}
+
+#fName {
+  color: var(--accent-color-me);
+}
+#mName1 {
+  color: var(--accent-2);
+}
+#mName2 {
+  color: var(--accent-color-programing);
+}
+
+.jobTitle ul {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 2.3rem;
+  list-style: none;
+}
+
+.jobTitle ul li {
+  animation: slide 12s steps(2) infinite;
+}
+
+.jobTitle ul li span {
+  font-weight: 600;
+  display: inline-block;
+  font-size: clamp(1rem, 2.5vw + 0.5rem, 2rem);
+  width: 0%;
+  white-space: nowrap;
+  border-right: solid 2px var(--accent-1);
+  background: var(--cyber-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: blink 0.85s step-end infinite,
+    typing 3s steps(21) infinite alternate;
+}
+
+/* ------- About Section ------- */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  background-image: var(--background-image-about);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.aboutTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  width: 55%;
+}
+
+.aboutTitle h1 span {
+  background: var(--accent-color-me);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#about p {
+  width: min(75%, 900px);
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  border-radius: 30px;
+}
+
+#codingImg {
+  width: min(40%, 420px);
+  border-radius: 10%;
+  box-shadow: #3b82f6 0px 5px 25px;
+  transition: transform 0.8s ease;
+}
+
+#codingImg:hover {
+  transform: scale(1.1);
+}
+
+/* ------- Background Section ------- */
+#background {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#backgroundImg {
+  background: var(--card-bg);
+  border-radius: 3rem;
+  min-height: 20%;
+  max-width: 20%;
+}
+
+.backgroundContainer {
+  flex-basis: 60%;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: clamp(20vh, 3000px, 60vh);
+  background-color: var(--card-bg);
+  padding-bottom: 2rem;
+}
+
+.backgroundButton {
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.backgroundButton:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(to right, #00fff0, #0071ff);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  box-shadow: #00fff0 0px 5px 25px;
+}
+
+.backgroundButton:hover:after,
+.backgroundButton.active:after {
+  transform: scaleX(1);
+}
+
+#backgroundList .activeTab {
+  flex-basis: 60%;
+  display: block;
+}
+
+#backgroundList :not(.activeTab) {
+  display: none;
+}
+
+/* ------- Services Section ------- */
+#service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  position: relative;
+}
+
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.serviceList p {
+  width: max(75%, 35vh);
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  border-radius: 30px;
+}

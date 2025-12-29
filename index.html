@@ -73,6 +73,7 @@
     <!-- Social Meta Tags Generated via https://www.opengraph.xyz -->
 
     <link rel="stylesheet" href="/Portfolio/css/main.css" />
+    <link rel="stylesheet" href="/Portfolio/css/cybersecurity.css" />
   </head>
   <body data-light-theme="false">
     <header>
@@ -130,30 +131,50 @@
         </ul>
       </nav>
 
-      <button id="themeSwitch">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24px"
-          viewBox="0 -960 960 960"
-          width="24px"
-          fill="#FC9601"
+      <div class="header-controls">
+        <button
+          id="cyberModeBtn"
+          class="headerBtn"
+          aria-label="Switch to Cybersecurity Mode"
+          title="Switch Mode"
         >
-          <path
-            d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24px"
-          viewBox="0 -960 960 960"
-          width="24px"
-          fill="#000"
-        >
-          <path
-            d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"
-          />
-        </svg>
-      </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="currentColor"
+          >
+            <path
+              d="M480-80q-137-56-228.5-177T160-520v-240l320-120 320 120v240q0 144-91.5 265T480-80Zm0-84q103-53 171.5-144T720-520v-188l-240-90-240 90v188q0 102 68.5 193T480-164Zm0-276Z"
+            />
+          </svg>
+        </button>
+        <button id="themeSwitch" class="headerBtn" title="Switch Theme">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#FC9601"
+          >
+            <path
+              d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#fff"
+          >
+            <path
+              d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"
+            />
+          </svg>
+        </button>
+      </div>
       <div
         id="mobileNavBtn"
         aria-label="Mobile Navigation"
@@ -161,167 +182,404 @@
       ></div>
     </header>
     <!-- Main Content -->
-    <!-- <div id="main"> -->
-    <section id="home">
-      <h1 id="mainTitle">
-        Welcome to <br />
-        My <span id="portfolioWord">Portfolio</span>
-      </h1>
-      <div id="jobTitleContainer">
-        <div class="jobTitle">
-          <h1>
-            <span id="fName">Omar</span>
-            <span id="mName1">Mohamed</span>
-            <span id="mName2">Hatem</span>
-          </h1>
-          <ul>
-            <li><span>Frontend Developer</span></li>
-            <li><span>Cybersecurity Analyst</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <div class="aboutTitle">
-        <h1>Who am <span>I</span></h1>
-        <p>
-          I’m a frontend developer who loves bringing ideas to life on the web
-          with and with a passion for creating user-friendly and visually
-          appealing websites. With a strong foundation in HTML, CSS, and
-          JavaScript, I specialize in building responsive and interactive
-          interfaces that provide a seamless user experience. My focus is always
-          on creating designs that not only look great but also deliver a smooth
-          and engaging experience for every user. Let’s work together to turn
-          your vision into something truly amazing!
-        </p>
-      </div>
-      <img
-        src="/Portfolio/assets/pictures/coding.png"
-        alt="coding image"
-        id="codingImg"
-        loading="lazy"
-      />
-    </section>
-    <section id="background">
-      <img
-        src="/Portfolio/assets/pictures/me3.png"
-        alt="me"
-        id="backgroundImg"
-      />
-      <div class="backgroundContainer">
-        <div>
-          <h1 class="title">My Background</h1>
-          <div id="backgroundButtonContainer">
-            <button
-              class="backgroundButton active"
-              name="education"
-              onclick="openTab('education')"
-            >
-              Education
-            </button>
-            <button
-              class="backgroundButton"
-              name="skill"
-              onclick="openTab('skill')"
-            >
-              Skills
-            </button>
-            <button
-              class="backgroundButton"
-              name="work"
-              onclick="openTab('work')"
-            >
-              Experience
-            </button>
+    <main id="frontend-version">
+      <section id="home">
+        <h1 id="mainTitle">
+          Welcome to <br />
+          My <span id="portfolioWord">Portfolio</span>
+        </h1>
+        <div id="jobTitleContainer">
+          <div class="jobTitle">
+            <h1>
+              <span id="fName">Omar</span>
+              <span id="mName1">Mohamed</span>
+              <span id="mName2">Hatem</span>
+            </h1>
+            <ul>
+              <li><span>Frontend Developer</span></li>
+              <li><span>Cybersecurity Analyst</span></li>
+            </ul>
           </div>
         </div>
-        <div id="backgroundList">
-          <p id="education" class="activeTab">
-            Helwan University, Faculty of Engineering <br />
-            Bachelor of Communication & Information
-          </p>
-
-          <p id="skill">
-            As a frontend developer, I have a wide range of skills that enable
-            me to create visually appealing and user-friendly websites. I am
-            proficient in HTML, CSS, and JavaScript. I also have expertise in
-            creating high-quality presentations, including PowerPoint. I am a
-            detail-oriented and organized individual with strong communication
-            skills, which enables me to effectively collaborate with clients and
-            team members to achieve project goals.
-          </p>
-
-          <p id="work">
-            As a skilled frontend developer, I have a strong background in
-            creating professional and visually appealing websites. I have
-            successfully developed two websites, utilizing my expertise in HTML,
-            CSS, and JavaScript. Additionally, I have experience with Java
-            application development, and currently studying Cybersecurity which
-            helps me understand web attacks and their mitigations.
+      </section>
+      <section id="about">
+        <div class="aboutTitle">
+          <h1>Who am <span>I</span></h1>
+          <p>
+            I’m a frontend developer who loves bringing ideas to life on the web
+            with a passion for creating user-friendly and visually appealing
+            websites. With a strong foundation in HTML, CSS, and JavaScript, I
+            specialize in building responsive and interactive interfaces that
+            provide a seamless user experience. My focus is always on creating
+            designs that not only look great but also deliver a smooth and
+            engaging experience for every user. Let’s work together to turn your
+            vision into something truly amazing!
           </p>
         </div>
-      </div>
-    </section>
-    <section id="service">
-      <h1 class="title">Frontend Development</h1>
-      <div class="serviceList">
-        <div id="usp">
-          Whether you need a simple website or a complex e-commerce platform, I
-          can help you bring your vision to life.
+        <img
+          src="/Portfolio/assets/pictures/coding.png"
+          alt="coding image"
+          id="codingImg"
+          loading="lazy"
+        />
+      </section>
+      <section id="background">
+        <img
+          src="/Portfolio/assets/pictures/me3.png"
+          alt="me"
+          id="backgroundImg"
+        />
+        <div class="backgroundContainer">
+          <div>
+            <h1 class="title">My Background</h1>
+            <div id="backgroundButtonContainer">
+              <button
+                class="backgroundButton active"
+                name="education"
+                onclick="openTab('education')"
+              >
+                Education
+              </button>
+              <button
+                class="backgroundButton"
+                name="skill"
+                onclick="openTab('skill')"
+              >
+                Skills
+              </button>
+              <button
+                class="backgroundButton"
+                name="work"
+                onclick="openTab('work')"
+              >
+                Experience
+              </button>
+            </div>
+          </div>
+          <div id="backgroundList">
+            <p id="education" class="activeTab">
+              Helwan University, Faculty of Engineering <br />
+              Bachelor of Communication & Information
+            </p>
+
+            <p id="skill">
+              As a frontend developer, I have a wide range of skills that enable
+              me to create visually appealing and user-friendly websites. I am
+              proficient in HTML, CSS, and JavaScript. I also have expertise in
+              creating high-quality presentations, including PowerPoint. I am a
+              detail-oriented and organized individual with strong communication
+              skills, which enables me to effectively collaborate with clients
+              and team members to achieve project goals.
+            </p>
+
+            <p id="work">
+              As a skilled frontend developer, I have a strong background in
+              creating professional and visually appealing websites. I have
+              successfully developed two websites, utilizing my expertise in
+              HTML, CSS, and JavaScript. Additionally, I have experience with
+              Java application development, and currently studying Cybersecurity
+              which helps me understand web attacks and their mitigations.
+            </p>
+          </div>
         </div>
-        <p>
-          I offer Frontend development services for small businesses and
-          individuals looking to establish a strong online presence. Creating
-          visually stunning and user-friendly frontend interfaces for websites
-          and applications. With a strong understanding of HTML, CSS, JavaScript
-          & Typescript, I can transform your design concepts into functional and
-          engaging user experiences.
-        </p>
-      </div>
-      <!-- <div class="serviceImg"></div> -->
-    </section>
-    <section id="project">
-      <h1 class="title">Projects</h1>
-      <div id="projectList"></div>
-    </section>
-    <section id="contact">
-      <h1 class="title">Contact Me</h1>
-      <div class="contactList">
-        <img src="/Portfolio/assets/pictures/arrow.png" alt="arrow" />
-        <span class="contactCard">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="28px"
-            viewBox="0 -960 960 960"
-            width="28px"
-            id="email"
-          >
-            <title>Gmail</title>
-            <path
-              d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"
+      </section>
+      <section id="service">
+        <h1 class="title">Frontend Development</h1>
+        <div class="serviceList">
+          <div id="usp">
+            Whether you need a simple website or a complex e-commerce platform,
+            I can help you bring your vision to life.
+          </div>
+          <p>
+            I offer Frontend development services for small businesses and
+            individuals looking to establish a strong online presence. Creating
+            visually stunning and user-friendly frontend interfaces for websites
+            and applications. With a strong understanding of HTML, CSS,
+            JavaScript & Typescript, I can transform your design concepts into
+            functional and engaging user experiences.
+          </p>
+        </div>
+        <!-- <div class="serviceImg"></div> -->
+      </section>
+      <section id="project">
+        <h1 class="title">Projects</h1>
+        <div id="projectList"></div>
+      </section>
+      <section id="contact">
+        <h1 class="title">Contact Me</h1>
+        <div class="contactList">
+          <img src="/Portfolio/assets/pictures/arrow.png" alt="arrow" />
+          <span class="contactCard">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="28px"
+              viewBox="0 -960 960 960"
+              width="28px"
+              id="email"
+            >
+              <title>Gmail</title>
+              <path
+                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"
+              />
+            </svg>
+            oviralvibeso@gmail.com
+          </span>
+          <span class="contactCard">
+            <svg
+              data-social="WhatsApp"
+              role="img"
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              fill="#25D366"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>WhatsApp</title>
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+              />
+            </svg>
+            +20 01062882023
+          </span>
+        </div>
+      </section>
+    </main>
+
+    <!-- Cybersecurity Content (Initially Hidden) -->
+    <main id="cyber-version" style="display: none">
+      <section id="cyber-home" class="cyber-section">
+        <div class="cyber-hero-content">
+          <div class="glitch-container">
+            <h1 class="cyber-title glitch" data-text="CYBER SECURITY">
+              CYBER SECURITY
+            </h1>
+          </div>
+          <h2 class="cyber-subtitle">BLUE TEAM | SOC ANALYST | FORENSICS</h2>
+          <div class="cyber-animation-container">
+            <div class="scanner-screen">
+              <div class="device-icon laptop">
+                <div class="screen-content">
+                  <!-- Content cycled by CSS animation -->
+                  <div class="scan-img img-1 code-block">
+                    <span class="cmd-prompt">C:\></span> AUTOPSY.EXE -SCAN
+                    -TARGET "SUS_FILE"<br />
+                    > ANALYZING HEADERS...<br />
+                    > <span class="alert-text">MALWARE SIGNATURE FOUND</span>
+                  </div>
+                  <div class="scan-img img-2 code-block">
+                    <span class="siem-header">[SIEM ALERT]</span> DATA
+                    EXFILTRATION<br />
+                    > SRC: 192.168.1.50<br />
+                    > DST: <span class="highlight-ip">127.0.0.1</span><br />
+                    > ACTION: BLOCKED
+                  </div>
+                  <div class="scan-img img-3 code-block">
+                    > PARSING LOGS...<br />
+                    > THREAT DETECTED<br />
+                    > INITIATING TRACE...
+                  </div>
+                </div>
+              </div>
+              <div class="magnifier">
+                <div class="lens"></div>
+              </div>
+              <div class="scan-overlay"></div>
+            </div>
+          </div>
+          <!-- Hidden Artifact 1: CCTV -->
+          <div class="hidden-artifact cctv-artifact">
+            <img src="/Portfolio/assets/pictures/cctv.webp" alt="CCTV Camera" />
+          </div>
+          <p class="cyber-intro">
+            Passionate cybersecurity professional with hands-on experience in
+            ethical hacking, network security, and SOC operations.
+          </p>
+          <div class="cyber-cta">
+            <a href="#cyber-projects" class="cyber-btn">VIEW INTELLIGENCE</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="cyber-about" class="cyber-section">
+        <h2 class="section-header">/// MISSION_PROFILE</h2>
+        <!-- Hidden Artifact 2: Fingerprint -->
+        <div class="hidden-artifact fingerprint-artifact">
+          <img
+            src="/Portfolio/assets/pictures/fingerprint.jpg"
+            alt="Fingerprint"
+          />
+        </div>
+        <div class="cyber-about-grid">
+          <div class="cyber-text-box">
+            <p>
+              Proficient in C++, Python, JavaScript, TypeScript, and Java, with
+              a strong foundation in cybersecurity principles, incident
+              response, and digital forensics. Actively participating in Capture
+              The Flag (CTF) competitions and continuous practical training on
+              cybersecurity platforms.
+            </p>
+            <p>
+              Currently studying for
+              <span class="highlight">eJPT, eCIR, and eCTHP</span>.
+            </p>
+            <p>
+              Completed
+              <span class="highlight">ITI Cybersecurity Ethical Hacking</span>
+              summer training.
+            </p>
+          </div>
+          <div class="cyber-img-box">
+            <img
+              src="/Portfolio/assets/pictures/Matrix_movie_still.jpg"
+              alt="Cyber Operations"
+              class="cyber-img"
             />
-          </svg>
-          oviralvibeso@gmail.com
-        </span>
-        <span class="contactCard">
-          <svg
-            data-social="WhatsApp"
-            role="img"
-            width="24px"
-            height="24px"
-            viewBox="0 0 24 24"
-            fill="#25D366"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>WhatsApp</title>
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
-            />
-          </svg>
-          +20 01062882023
-        </span>
-      </div>
-    </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="cyber-experience" class="cyber-section">
+        <h2 class="section-header">/// LOGS & HISTORY</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="date">Jun – Nov, 2025</span>
+            <h3>Digital Egypt Pioneers Initiative - DEPI</h3>
+            <p>Security Operations Center (SOC) Trainee</p>
+            <ul>
+              <li>
+                Managing vulnerabilities through identification, prioritization,
+                and remediation tracking
+              </li>
+              <li>
+                Recognizing threat indicators, adversary behavior, and attack
+                methodologies
+              </li>
+              <li>
+                Using SIEM platforms for alerting, threat correlation, and
+                detection tuning
+              </li>
+              <li>
+                Deploying and configuring an ELK-based SIEM on Ubuntu server
+              </li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <span class="date">Jul, 2024</span>
+            <h3>NTI Cisco CyberOps Summer Training</h3>
+            <p>Trainee</p>
+            <ul>
+              <li>
+                Focusing on Cisco CyberOps fundamentals and network defense
+                strategies.
+              </li>
+              <li>
+                Hands-on experience with industry-standard cybersecurity tools
+                for monitoring and detecting incidents.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="cyber-skills" class="cyber-section">
+        <h2 class="section-header">/// ARSENAL</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Technical Skills</h3>
+            <div class="skill-tags">
+              <span>C++</span><span>Python</span><span>JS/TS</span
+              ><span>Java</span> <span>Incident Triaging</span
+              ><span>Network Security</span><span>Splunk</span
+              ><span>Ethical Hacking</span>
+              <span>Forensics</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Certifications</h3>
+            <div class="cert-box">
+              <h4>Microsoft Certified SC-200 (Jun 2025)</h4>
+              <p>
+                Monitoring & responding to threats using Microsoft Sentinel,
+                Defender for Endpoint.
+              </p>
+            </div>
+            <div class="cert-box">
+              <h4>Google Cybersecurity Professional (Feb 2024)</h4>
+              <p>
+                Principles, Network Security, Linux, SQL, Automation with
+                Python.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cyber-projects" class="cyber-section">
+        <h2 class="section-header">/// OPERATIONS</h2>
+        <!-- Hidden Artifact 3: Under Surveillance -->
+        <div class="hidden-artifact surveillance-artifact">
+          <img
+            src="/Portfolio/assets/pictures/under_surveillance.jpg"
+            alt="Under Surveillance"
+          />
+        </div>
+        <div class="project-grid-cyber">
+          <!-- Project 1 -->
+          <div class="cyber-card">
+            <h3>Intrusion Detection System</h3>
+            <p class="date">2025</p>
+            <p>
+              Rule-based IDS using OOP, Regex, and Multithreading. Integrated
+              Slf4j and Log4j2 for real-time monitoring.
+            </p>
+          </div>
+          <!-- CTF -->
+          <div class="cyber-card">
+            <h3>CTF Competitions</h3>
+            <p>
+              Forensics focus: CatCTF, ConcCTF, CyCTF, Black Hat MEA, Huntress
+              CTF, PicoCTF, HTB University CTF 2025.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="cyber-contact" class="cyber-section contact-cyber">
+        <h2 class="section-header">/// ESTABLISH_UPLINK</h2>
+        <div class="contactList">
+          <img src="/Portfolio/assets/pictures/arrow.png" alt="arrow" />
+          <span class="contactCard">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="28px"
+              viewBox="0 -960 960 960"
+              width="28px"
+              id="email-cyber"
+            >
+              <path
+                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"
+              />
+            </svg>
+            oviralvibeso@gmail.com
+          </span>
+          <span class="contactCard">
+            <svg
+              data-social="WhatsApp"
+              role="img"
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              fill="#25D366"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+              />
+            </svg>
+            +20 01062882023
+          </span>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="footerContent">
@@ -399,6 +657,6 @@
       </div>
     </footer>
     <!-- </div> -->
-    <script src="/Portfolio/javascript/main.js"></script>
+    <script type="module" src="/Portfolio/javascript/main.js"></script>
   </body>
 </html>

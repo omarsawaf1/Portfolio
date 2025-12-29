@@ -1,0 +1,130 @@
+@media (max-width: 900px) {
+  #projectList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+  header {
+    padding: 1.15rem;
+  }
+  .logo {
+    width: 64px;
+    height: 30px;
+  }
+  #navLinks {
+    display: none;
+  }
+
+  #navLinks.active {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 50%;
+    height: 100vh;
+    background-color: var(--nav-footer-bg-color);
+    backdrop-filter: blur(10px);
+    z-index: 888;
+  }
+
+  #mobileNavBtn {
+    display: block;
+    margin-left: 2vw;
+    background-image: var(--ham-menu);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  #mobileNavBtn.active {
+    top: 1.6rem;
+    right: 2rem;
+    position: fixed;
+    background-image: url("/Portfolio/assets/svg/red_close.svg");
+  }
+
+  #about {
+    flex-direction: column;
+    align-items: center;
+  }
+  #home,
+  #about,
+  #contact {
+    background-attachment: scroll;
+  }
+  #home {
+    gap: 10vh;
+    padding: 60px 0;
+  }
+
+  .contactList img {
+    display: none;
+  }
+  .rightArrow {
+    right: -2%;
+  }
+  .leftArrow {
+    left: -2%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    padding: 0 1rem;
+  }
+  .header-controls {
+    gap: 8px;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  .rightArrow,
+  .leftArrow {
+    right: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #navLinks.active {
+    width: 100%;
+  }
+  #projectList {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .card {
+    padding: 0 0.9rem;
+  }
+  .carouselArrow {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 520px) {
+  .jobTitle ul {
+    height: calc(1.25rem * 1.2);
+    overflow: hidden;
+  }
+  .jobTitle ul li span {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

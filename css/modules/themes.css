@@ -1,0 +1,65 @@
+/* -------------------- DARK THEME (Default) -------------------- */
+:root {
+  --font-family: "Cormorant Garamond", serif;
+  --primary-color: #e5e7eb; /* text color */
+  --background-color: #0b0f1a; /* richer dark */
+  --hover-bg-color: rgba(255, 255, 255, 0.08);
+  --nav-footer-bg-color: rgba(9, 13, 24, 0.7);
+
+  /* brand accents */
+  --accent-color-cyber: #00fff0;
+  --accent-color-me: #ff5733;
+  --accent-color-programing: #f7df1e;
+  --cyber-gradient: linear-gradient(-20deg, magenta, #00fff0);
+
+  /* utility accents */
+  --accent-1: #3b82f6;
+  --accent-2: #00fff0;
+  --accent-3: #7cff00;
+  --title-bg: rgba(10, 14, 25, 0.85);
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --transition-medium: 250ms ease;
+
+  --background-image-home: url("/Portfolio/assets/pictures/otl_me_background2.webp");
+  --background-image-about: url("/Portfolio/assets/pictures/canva1.jpg");
+  --ham-menu: url("/Portfolio/assets/svg/menu.svg");
+
+  @media screen and (max-width: 640px) {
+    --background-image-home: url("/Portfolio/assets/pictures/otl_me_background_mobile2.webp");
+  }
+}
+
+/* -------------------- LIGHT THEME (Modern Colorful) -------------------- */
+body[data-light-theme="true"] {
+  --background-color: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  --nav-footer-bg-color: rgba(255, 255, 255, 0.65);
+  --hover-bg-color: rgba(255, 255, 255, 0.4);
+  --primary-color: #1a202c;
+  --accent-1: #6c63ff;
+  --accent-2: #ff6584;
+  --accent-3: #43d9ad;
+  --accent-glow: rgba(108, 99, 255, 0.3);
+  --programing-gradient: linear-gradient(135deg, #ff6584, #6c63ff);
+  --title-bg: rgba(255, 255, 255, 0.85);
+  --card-bg: rgba(255, 255, 255, 0.55);
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  --transition-medium: 250ms ease;
+
+  /* --background-image-home: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%); */
+  --background-image-home: url("/Portfolio/assets/pictures/otl_me_background_light.webp");
+  --background-image-about: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  --ham-menu: url("/Portfolio/assets/svg/menu_light.svg");
+
+  background-attachment: fixed;
+}
+
+/* body[data-light-theme="true"] #home,
+body[data-light-theme="true"] #about {
+  background-image: none;
+} */
+
+body[data-light-theme="true"] .card {
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
