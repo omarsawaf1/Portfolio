@@ -69,10 +69,10 @@
     display: none;
   }
   .rightArrow {
-    right: -2%;
+    right: 5px;
   }
   .leftArrow {
-    left: -2%;
+    left: 5px;
   }
 }
 
@@ -85,10 +85,15 @@
     margin-left: auto;
     margin-right: 10px;
   }
-  .rightArrow,
+  #projectList {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .rightArrow {
+    right: 5px;
+  }
   .leftArrow {
-    right: 0;
-    left: 0;
+    left: 5px;
   }
 }
 

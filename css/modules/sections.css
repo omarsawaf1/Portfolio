@@ -147,7 +147,7 @@ body[data-light-theme="true"] .jobTitle {
 }
 
 #about p {
-  width: min(75%, 900px);
+  width: min(110%, 900px);
   text-align: center;
   font-size: 1.2rem;
   letter-spacing: 1px;

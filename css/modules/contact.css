@@ -126,11 +126,11 @@ footer p {
 }
 
 .socialsContainer a:hover::before {
-  transform: translateY(-65px) rotate(0);
+  transform: translateY(-48px) rotate(0);
   opacity: 1;
 }
 
 .socialsContainer a:hover::after {
-  transform: translateY(-42px) rotate(0);
+  transform: translateY(-27px) rotate(0);
   opacity: 1;
 }

@@ -24,6 +24,8 @@ p {
 
 #usp {
   font-size: 1rem;
+  text-align: center;
+  width: min(90%, 900px);
 }
 
 #usp::before {
