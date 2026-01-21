@@ -113,7 +113,7 @@ body[data-light-theme="true"] .jobTitle {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: blink 0.85s step-end infinite,
+  animation: blinkF 0.85s step-end infinite,
     typing 3s steps(21) infinite alternate;
 }
 

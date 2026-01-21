@@ -57,7 +57,7 @@
   }
 }
 
-@keyframes blink {
+@keyframes blinkF {
   50% {
     border-color: transparent;
   }
